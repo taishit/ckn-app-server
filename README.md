@@ -10,4 +10,4 @@
 
 # 資材取り込み
 リポジトリを以下コマンドでローカルの任意の場所にCloneしてください。
-Git clone 
+<br> `Git clone https://github.com/taishit/ckn-app-server.git`
