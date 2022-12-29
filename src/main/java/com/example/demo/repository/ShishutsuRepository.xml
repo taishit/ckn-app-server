@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.repository.ShishutsuRepository">
+    <select id="selectByNo" resultType="com.example.demo.model.ShishutsuEntity">
+        SELECT * FROM t_infomation WHERE user_id = #{userId}
+    </select>
+    
+    <insert id="registInfo">
+        INSERT INTO ckn.t_infomation(user_id, entry_no, cost_name, cost_type, cost, creater, create_date, updater, update_date)
+VALUES(#{userId}, #{entryNo}, #{costName}, #{costType}, #{cost}, #{userName}, CURRENT_TIMESTAMP, #{userName}, CURRENT_TIMESTAMP);
+    </insert>
+    
+    <delete id="deleteInfo">
+    	DELETE  
+    	FROM t_infomation 
+    	WHERE user_id = #{userId}
+    	AND   entry_no = #{entryNo}
+    </delete>
+    
+    <update id="updateInfo">
+    	UPDATE t_infomation
+    	SET user_id = #{userId},
+    	    cost_name = #{costName},
+    	    cost_type = #{costType},
+    	    cost = #{cost},
+    	    updater = #{userName},
+    	    update_date = CURRENT_TIMESTAMP
+    	WHERE user_id = #{userId}
+    	AND   entry_no = #{entryNo}
+    </update>
+</mapper>

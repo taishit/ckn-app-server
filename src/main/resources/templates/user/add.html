@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>支出登録画面</title>
+</head>
+<body>
+<h1>支出登録</h1>
+
+<form method="POST" th:action="@{output}" th:object="${shishutsuForm}">
+<p>支出項目</p>
+<input type="text" name="name" th:field="${shishutsuForm.name}">
+<br>
+<p>支出金額</p>
+<input type="text" name="cost" th:field="${shishutsuForm.cost}">
+<br>
+<p style="color:red;" th:errors="${shishutsuForm.name}" class="error"></p>
+<p style="color:red;" th:errors="${shishutsuForm.cost}" class="error"></p>
+<input type="submit" value="送信">
+</form>
+
+<a th:href="@{/input}">TOP画面へ</a>
+</body>
+</html>

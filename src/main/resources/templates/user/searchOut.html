@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}" rel="stylesheet" >
+<script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+<title>結果画面</title>
+</head>
+<body>
+<h1>あなたの登録情報</h1>
+	<table class="table-striped table-hover table-sm table-bordered" width="70%">
+		<thead>
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">ユーザID</th>
+		      <th scope="col">費用名称</th>
+		      <th scope="col">費用種別</th>
+		      <th scope="col">金額</th>
+		    </tr>
+		</thead>
+		<tbody>
+            <tr th:each="shishutsuEntity : ${shishutsuEntityList}" th:object="${shishutsuEntity}">
+                <th>1</th>
+                <td th:text="*{userId}"></td>
+                <td th:text="*{costName}"></td>
+                <td th:text="*{costType}"></td>
+                <td th:text="*{cost}"></td>
+            </tr>
+            <br>
+        </tbody>
+	</table>
+<br>
+<a th:href="@{/input}">TOP画面へ</a>
+</body>
+</html>

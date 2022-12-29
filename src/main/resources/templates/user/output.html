@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>結果画面</title>
+</head>
+<body>
+<h1>以下の情報の登録に成功しました</h1>
+<p>支出項目名：<span th:text="${name}"></span></p>
+<p>支出金額：<span th:text="${cost}"></span></p>
+<a th:href="@{/input}">TOP画面へ</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>検索画面</title>
+</head>
+<body>
+<h1>ユーザー情報検索</h1>
+<form method="POST"  th:action="@{/user/search_out}" th:object="${registerShishutsuForm}">
+    <div>
+        ID：<input type="text" name="userId"/>
+    </div>
+    <br/>
+    <div>
+        <input type="submit" value="検索" style="width: 100px;" />
+    </div>
+    <br/>
+</form>
+
+<a th:href="@{/input}">TOP画面へ</a>
+</body>
+</html>

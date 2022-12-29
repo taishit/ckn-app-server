@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>結果画面</title>
+</head>
+<body>
+<h1>以下の情報で登録が完了しました</h1>
+            <tr>
+                <th>ユーザID：</th>
+                <td th:text="*{userId}"></td>
+            </tr>
+            <br>
+            <tr>
+                <th>費用名称：</th>
+                <td th:text="*{costName}"></td>
+            </tr>
+            <br>
+            <tr>
+                <th>費用種別：</th>
+                <td th:text="*{costType}"></td>
+            </tr>
+            <br>
+            <tr>
+                <th>金額：</th>
+                <td th:text="*{cost}"></td>
+            </tr>
+<br>
+<a th:href="@{/input}">TOP画面へ</a>
+</body>
+</html>

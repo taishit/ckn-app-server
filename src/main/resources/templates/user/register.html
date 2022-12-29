@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>支出登録画面</title>
+</head>
+<body>
+<h1>ユーザー情報検索</h1>
+<form method="POST"  th:action="@{/user/register_out}" th:object="${registerShishutsuForm}">
+    <div>
+        ID：<input type="text" name="userId"/>
+    </div>
+    <br/>
+    <div>
+        費用名称：<input type="text" name="costName"/>
+    </div>
+    <br/>
+    <div>
+        費用種別：<input type="text" name="costType"/>
+    </div>
+    <br/>
+    <div>
+        金額：<input type="text" name="cost"/>
+    </div>
+    <br/>
+    <div>
+        <input type="submit" value="登録" style="width: 100px;" />
+    </div>
+    <br/>
+</form>
+
+<a th:href="@{/input}">TOP画面へ</a>
+</body>
+</html>
