@@ -2,10 +2,7 @@ package com.example.demo.service;
 
 import java.util.List;
 
-import com.example.demo.model.RegisterShishutsuForm;
 import com.example.demo.model.ShishutsuEntity;
-import com.example.demo.model.ShishutsuEntityList;
-import com.example.demo.model.ShishutsuForm;
 
 public interface ShishutsuService {
 	

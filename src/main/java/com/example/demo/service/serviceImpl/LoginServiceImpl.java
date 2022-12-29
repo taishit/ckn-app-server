@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.example.demo.service.serviceImpl;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.model.LoginEntity;
 import com.example.demo.repository.UserConfirmRepository;
 import com.example.demo.repository.UserMstRepository;
+import com.example.demo.service.LoginService;
 
 
 @Service

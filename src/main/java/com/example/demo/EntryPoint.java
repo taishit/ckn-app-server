@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan(basePackages = "com.example.demo.repository")
-public class NoDiApplication {
+public class EntryPoint {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NoDiApplication.class, args);
+		SpringApplication.run(EntryPoint.class, args);
 	}
 
 }

@@ -5,7 +5,6 @@ import java.util.Date;
 
 import javax.validation.constraints.Negative;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.PositiveOrZero;
 
 import lombok.Data;
 

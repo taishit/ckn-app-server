@@ -1,18 +1,14 @@
-package com.example.demo.service;
+package com.example.demo.service.serviceImpl;
 
 import java.math.BigDecimal;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.model.RegisterShishutsuForm;
 import com.example.demo.model.ShishutsuEntity;
-import com.example.demo.model.ShishutsuEntityList;
-import com.example.demo.model.ShishutsuForm;
-import com.example.demo.model.ShishutsuModel;
 import com.example.demo.repository.ShishutsuRepository;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import com.example.demo.service.ShishutsuService;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,8 +24,6 @@ public class ShishutsuServiceImpl implements ShishutsuService {
 	public List<ShishutsuEntity> findByNo(String userId) {
 
 		List<ShishutsuEntity> resultList = shishutsuRepository.selectByNo(userId);
-		
-		ShishutsuEntityList shishutsuEntityList = new ShishutsuEntityList(); 
 		
 		List<ShishutsuEntity> shishutsuList = new ArrayList<ShishutsuEntity>(); 
 		

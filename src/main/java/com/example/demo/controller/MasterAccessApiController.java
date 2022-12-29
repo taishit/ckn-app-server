@@ -1,23 +1,14 @@
 package com.example.demo.controller;
 import java.util.List;
 
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.cors.CorsConfiguration;
 
 import com.example.demo.model.CodeMstEntity;
-import com.example.demo.model.RegisterShishutsuForm;
-import com.example.demo.model.ShishutsuEntity;
-import com.example.demo.model.ShishutsuForm;
 import com.example.demo.service.MasterAccessService;
-import com.example.demo.service.ShishutsuService;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
